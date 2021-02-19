@@ -1,6 +1,6 @@
 {
   "name": "youtube-playlist-getter",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Youtube Playlist API Wrapper",
   "main": "index.js",
   "scripts": {
@@ -14,6 +14,13 @@
     "api",
     "yt"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fbagjug/Youtube-Playlist-Getter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fbagjug/Youtube-Playlist-Getter/issues"
+  },
   "author": "Qwerty",
   "license": "MIT",
   "dependencies": {
