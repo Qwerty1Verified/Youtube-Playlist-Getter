@@ -1,4 +1,5 @@
 # YouTube Playlist Getter
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ffbagjug%2FYoutube-Playlist-Getter.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Ffbagjug%2FYoutube-Playlist-Getter?ref=badge_shield)
 
 YouTube Playlist Getter is an API wrapper dedicated to getting the videos inside a playlist and returning them in an array.
 
@@ -53,3 +54,5 @@ ytlist.searchPlaylist('https://www.youtube.com/watch?v=l0U7SxXHkPY&list=PLbpi6Za
 The YouTube API doesn't return a maxres thumbnail for every video, you will need to account for this if you want to use the thumbnails as you will be told "maxres" is undefined.
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ffbagjug%2FYoutube-Playlist-Getter.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Ffbagjug%2FYoutube-Playlist-Getter?ref=badge_large)
