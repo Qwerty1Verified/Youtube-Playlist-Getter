@@ -1,6 +1,6 @@
 {
   "name": "youtube-playlist-getter",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Youtube Playlist API Wrapper",
   "main": "index.js",
   "scripts": {
