@@ -15,17 +15,19 @@ class searchPlaylist {
             // Check if the list is defined
             throw new Error('Invalid playlist URL.');
         }
-        let playlistID = playlistURL.split('list=')[1]; // Get playlist ID
+        let playlistID = /[a-zA-Z0-9_\.-]+/g.exec(playlistURL.split('list=')[1])[0]; // Get playlist ID
 
         // Search for playlist
         fetch(`https://www.googleapis.com/youtube/v3/playlistItems?key=${dotenv.parsed.YT_API_KEY}&part=snippet&playlistId=${playlistID}&maxResults=50`, {method: 'GET'})
         .then(res => res.json())
         .then(json => {
             if (!json) {
-                throw new Error('JSON not recieved');
+                throw new Error('Data not received.');
             }
             if (json.error && json.error.message == 'API key not valid. Please pass a valid API key.') {
                 throw new Error('API key is invalid.');
+            } else if (json.error && json.error.message == "The playlist identified with the request's <code>playlistId</code> parameter cannot be found.") {
+                throw new Error('Playlist not found.');
             }
             let videoIDs = [];
             // Push video ID's into array
@@ -36,7 +38,7 @@ class searchPlaylist {
             .then(res => res.json())
             .then(videoJSON => {
                 if (!videoJSON) {
-                    throw new Error('JSON not recieved');
+                    throw new Error('Data not received.');
                 }
                 if (json.error && json.error.message == 'API key not valid. Please pass a valid API key.') {
                     throw new Error('API key is invalid.');
